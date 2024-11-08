@@ -1,0 +1,55 @@
+<tr id="product-{{ product.id }}">
+  <td colspan="7">
+    <form
+      hx-put="/update/"
+      hx-target="#product-{{ product.id }}"
+      hx-swap="outerHTML"
+    >
+      <!-- Hidden input for product ID -->
+      <input type="hidden" name="id" value="{{ product.id }}" />
+
+      <div class="row">
+        <div class="col">
+          <input
+            type="text"
+            name="title"
+            value="{{ product.title }}"
+            class="form-control"
+            placeholder="Product Name"
+          />
+        </div>
+        <div class="col">
+          <input
+            type="text"
+            name="description"
+            value="{{ product.description }}"
+            class="form-control"
+            placeholder="Description"
+          />
+        </div>
+        <div class="col">
+          <input
+            type="number"
+            name="stock"
+            value="{{ product.stock }}"
+            class="form-control"
+            placeholder="Stock"
+          />
+        </div>
+        <div class="col">
+          <input
+            type="number"
+            name="price"
+            value="{{ product.price }}"
+            class="form-control"
+            placeholder="Price"
+            step="0.01"
+          />
+        </div>
+        <div class="col">
+          <button type="submit" class="btn btn-success">Save</button>
+        </div>
+      </div>
+    </form>
+  </td>
+</tr>

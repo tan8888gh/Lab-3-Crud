@@ -1,0 +1,34 @@
+<!--  -->
+<form method="post" hx-post="/product/add" hx-target="#productList" 
+hx-swap="beforeend"
+>
+
+<div>
+    <label for="title" class="form-label">Product Name</label>
+    <input type="text" class="form-control" id="title" name="title" required/>
+</div> 
+
+<div>
+    <label for="description" class="form-label">Description</label>
+    <textarea class="form-control" id="description" name="description" required>
+    </textarea>
+</div>
+
+<div>
+    <label for="stock" class="form-label">Stock</label>
+    <input type="number" class="form-control" id="stock" name="stock" required/>
+</div>
+
+<div>
+    <label for="price" class="form-label">Price</label>
+    <input type="number" class="form-control" id="price" name="price" required/>
+</div>
+
+<div>
+    <label for="thumbnail" class="form-label">Thumbnail URL</label>
+    <input type="text" class="form-control" id="thumbnail" name="thumbnail" required/>
+</div>
+
+<button type="submit" class="btn btn-success">Add Product</button>
+
+</form>

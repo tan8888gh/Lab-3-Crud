@@ -1,0 +1,30 @@
+<tr id="product-{{product.id}}">
+
+    <td>
+        <img src="{{product.thumbnail}}"  alt="Image not found" class="img-thumbnail"/>
+    </td>
+    <td>{{product.id}}</td>
+    <td>{{product.title}}</td>
+    <td>{{product.description}}</td>
+    <td>{{product.stock}}</td>
+    <td>{{product.price}}</td>
+    <td>
+        <button
+          type="button"
+          class="btn btn-sm btn-warning"
+          hx-target="closest tr"
+          hx-swap="outerHTML"
+          hx-get="/update/{{ product.id }}"
+          hx-trigger="click"
+        >
+          <i class="bi bi-pencil-square"></i>
+        </button>
+      </td>
+      <td>
+        <button type="button" class="btn btn-sm btn-danger"
+        hx-target="#product-{{ product.id }}"  hx-swap="outerHTML" hx-delete="/product/{{ product.id }}" hx-trigger="click">
+          <i class="bi bi-trash"></i>
+        </button>
+      </td>
+
+</tr>
